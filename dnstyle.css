@@ -10,6 +10,9 @@ html{
     font-size: 62.5%;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
                     /* ANNOUNCEMENT STYLING */
 
 
@@ -21,9 +24,11 @@ html{
     height: 50px;
     display: flex;
     justify-content: center;
+    position: relative;
+    scroll-behavior: smooth;
 }
 
-.announcement-container button{
+.announcement-container a{
     outline: none;
     border: none;
     color: white;
@@ -92,4 +97,72 @@ html{
 .navbar-container .nav-icons{
     font-size: 2rem;
     cursor: pointer;
+}
+
+
+                        /* CATALOG  */
+.catalog{
+    padding: 5rem 0;
+}
+
+.catalog .catalog-heading{
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.catalog .catalog-title{
+    font-size: 5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.catalog-items{
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    position: relative;
+}
+
+
+.catalog-items li{
+    list-style: none;
+    margin-right: 1.6rem;
+}
+
+.catalog-items li a{
+    color: #666;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.catalog-items li a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    z-index: 2;
+    background-color: black;
+    position: absolute;
+    left: 40%;
+    right: 40%;
+    transition: all 0.3s ease-in-out;
+}
+
+.catalog-items li a:hover::after{
+    width: 100%;
+    left: 0%;
+    right: 0%;
+}
+
+.catalog-items li a:hover{
+    font-size: 1.4rem;
+    color: black;
 }
